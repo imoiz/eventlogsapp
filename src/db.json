@@ -1,35 +1,13 @@
+
 {
-  "users": [
+  "posts": [
     {
       "id": 1,
-      "userName": "Ali Khan",
-      "city": "Karachi",
-      "gender": "Male",
-      "dob": "1990-05-10",
-      "active": true
-    },
-    {
-      "id": 2,
-      "userName": "Sara Ahmed",
-      "city": "Lahore",
-      "gender": "Female",
-      "dob": "1995-09-21",
-      "active": false
-    },
-    {
-      "id": 3,
-      "userName": "Bilal Shah",
-      "city": "Islamabad",
-      "gender": "Male",
-      "dob": "1992-03-15",
-      "active": true
+      "title": "hello"
     }
   ],
-  "cities": [
-    { "label": "Karachi", "value": "Karachi" },
-    { "label": "Lahore", "value": "Lahore" },
-    { "label": "Islamabad", "value": "Islamabad" },
-    { "label": "Peshawar", "value": "Peshawar" }
-  ]
+  "profile": {
+    "name": "typicode"
+  }
 }
 
