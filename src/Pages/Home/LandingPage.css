@@ -1,0 +1,18 @@
+.main-content {
+  flex: 1;
+  padding: 20px;
+  /* Account for sidebar width */
+  /* margin-left: 250px;  */
+  min-height: calc(100vh - 46px); /* Account for header height */
+  background: #f8f9fa;
+}
+
+.main-content h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  color: #666;
+  font-size: 16px;
+}

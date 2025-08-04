@@ -1,0 +1,249 @@
+/* ------- Header section css start here ------------ */
+.sidebar-toggle {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar-toggle {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+.page-header {
+  border-bottom: 5px solid #ffcc00 !important;
+}
+.page-header.navbar {
+background-color: #fff !important;
+}
+.navbar-nav .nav-link {
+color: #708090;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+color: #536878; /* Darker for hover/active states */
+}
+
+.page-header.navbar {
+width: 100%;
+margin: 0;
+border: 0;
+padding: 0;
+height: 46px;
+min-height: 46px;
+filter: none;
+background-image: none;
+}
+
+
+.navbar > .container-fluid {
+display: flex;
+flex-wrap: inherit;
+align-items: center;
+justify-content: normal !important; /* Align items to the left */
+}
+
+
+@media (max-width: 768px) {
+.menu-toggle {
+  display: block; /* Show on small screens */
+}
+}
+
+/* ------ Header section css end here ---------- */
+/* -------------------------------------------------------------------------- */
+/* --------- Sidebar section css start here -------- */
+
+
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #666699 !important;
+  color: white;
+  /* position: fixed; */
+  top: 46px;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1040;
+  padding-top: 2px; /* space for navbar */
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white !important;
+}
+
+.menu-item:focus {
+  color: white !important;
+}
+
+.menu-item.active {
+  background: #000066;
+  font-weight: bold;
+  border-left: 4px solid #36c6d3;
+  color: white !important;
+}
+
+/* Override Bootstrap Nav.Link styles */
+.sidebar .nav-link {
+  color: white !important;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link:focus {
+  color: white !important;
+}
+
+.menu-item.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.menu-item i {
+  font-size: 1rem;
+}
+
+.collapsible::after {
+  content: '\25BC'; 
+  margin-left: auto;
+  font-size: 8px; 
+}
+
+/* Style for active ul */
+.sidebar-menu .active-ul {
+margin-left: -32px;
+border-left: 1px solid  rgba(255, 255, 255, 0.2) !important; 
+
+}
+
+.sidebar-menu .active-ul .menu-item {
+font-weight: bold; 
+color: #ffffff; 
+padding-left: 30px;
+}
+
+.sidebar-menu .active-ul .menu-item:hover {
+background:#404c5c !important; 
+}
+
+
+/* Style for active sub-menu item */
+.menu-item.active-sub {
+background: #404c5c !important;
+font-weight: bold;
+padding-left: 30px;
+
+}
+
+
+@media (max-width: 768px) {
+.sidebar {
+  transform: translateX(-100%); /* Hidden by default on small screens */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Show when open */
+}
+}
+
+/* .sidebar-toggle {
+  display: none;
+} */
+
+ /* ------ Sidebar section css end here ---------- */
+/* -------------------------------------------------------------------------- */
+/* --------- layout section css start here -------- */
+
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.body-container {
+  display: flex;
+  flex: 1;
+}
+
+/* ------ layout section css end here ---------- */
+/* -------------------------------------------------------------------------- */
+/* --------- Main Content section css start here -------- */
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+ /* margin-left: 250px; Account for sidebar width */
+  min-height: calc(100vh - 46px - 60px); /* Account for header and footer height */
+  background: #f8f9fa;
+}
+
+/* ------ Main Content section css end here ---------- */
+/* -------------------------------------------------------------------------- */
+/* --------- Footer section css start here -------- */
+
+.app-footer {
+  background-color: #343a40;
+  color: white;
+  padding: 15px 0;
+  margin-top: auto;
+  border-top: 1px solid #dee2e6;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #adb5bd;
+}
+
+.footer-version {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+}
+
+/* ------ Footer section css end here ---------- */
